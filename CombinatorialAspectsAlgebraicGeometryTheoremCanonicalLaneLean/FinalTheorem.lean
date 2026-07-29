@@ -1,0 +1,14 @@
+import CombinatorialAspectsAlgebraicGeometryTheoremCanonicalLaneLean.GateLemmas
+
+namespace HautevilleHouse
+namespace CombinatorialAspectsAlgebraicGeometryTheoremCanonicalLaneLean
+
+def ConstrainedAlgebraicClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_algebraic_endgame (A : AdmissibleClass) :
+    ConstrainedAlgebraicClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end CombinatorialAspectsAlgebraicGeometryTheoremCanonicalLaneLean
+end HautevilleHouse
